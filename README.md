@@ -1,3 +1,12 @@
+![demo](demo.jpg)
+
+Download random images for work on web development or design.
+
+- 10 random images with random sizes
+- 10 people images with  200x200
+- 10 square images with  800x800
+- 10 rectangle images with  800x400
+
 # Install
 
 ``` bash
