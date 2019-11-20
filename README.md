@@ -1,5 +1,3 @@
-![demo](demo.jpg)
-
 Download random images for work on web development or design.
 
 - 10 random images with random sizes
@@ -7,12 +5,14 @@ Download random images for work on web development or design.
 - 10 square images with  800x800
 - 10 rectangle images with  800x400
 
+![demo](demo.jpg)
+
 # Install
 
 ``` bash
 curl -L https://raw.githubusercontent.com/tanrax/place-image/master/place-images -o place-images
 chmod +x place-images
-mv place-images /usr/local/bin
+sudo mv place-images /usr/local/bin
 ```
 
 # Use
