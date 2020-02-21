@@ -1,4 +1,4 @@
-Random images for work on web development or design.
+# Random images for work on web development or design.
 
 ## [Download now](https://github.com/tanrax/place-image/blob/master/pack-place-image.zip?raw=true)
 (Daily new images)
@@ -10,7 +10,9 @@ Random images for work on web development or design.
 
 ![demo](demo.jpg)
 
-# Install
+## Generate your own images
+
+### Install
 
 ``` bash
 curl -L https://raw.githubusercontent.com/tanrax/place-image/master/place-images -o place-images
@@ -18,7 +20,7 @@ chmod +x place-images
 sudo mv place-images /usr/local/bin
 ```
 
-# Use
+### Use
 
 Execute in the folder where you want to create the random images.
 Attention! It will **delete any JPG** image that exists in the directory.
