@@ -19,6 +19,8 @@ jobs:
         rm -r pack-place-image
     - name: Upload
       run: |
+        git config user.email "action@github.com"
+        git config user.name "GitHub Action"
         git add pack-place-image.zip
         git commit -m 'Update build'
         git push origin master
