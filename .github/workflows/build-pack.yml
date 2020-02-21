@@ -1,0 +1,27 @@
+name: daily-pack
+
+on:
+  schedule:
+    - cron: "21 4 * * *"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and zip
+      run: |
+        mkdir -p pack-place-image
+        cd pack-place-image
+        ../place-images
+        cd ..
+        zip -r pack-place-image.zip pack-place-image
+        rm -r pack-place-image
+    - name: Upload
+      run: |
+        git add pack-place-image.zip
+        git commit -m 'Update build'
+        git push origin master
+
