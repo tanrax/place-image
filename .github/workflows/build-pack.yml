@@ -1,9 +1,5 @@
 name: daily-pack
 
-on:
-  schedule:
-    - cron: "21 4 * * *"
-
 jobs:
   build:
 
