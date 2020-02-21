@@ -1,5 +1,7 @@
 name: daily-pack
 
+on: [push]
+
 jobs:
   build:
 
