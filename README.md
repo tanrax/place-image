@@ -1,4 +1,7 @@
-Download random images for work on web development or design.
+Random images for work on web development or design.
+
+## [Download now](https://github.com/tanrax/place-image/blob/master/pack-place-image.zip?raw=true)
+(Daily new images)
 
 - 10 random images with random sizes
 - 10 people images with  200x200
