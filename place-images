@@ -2,7 +2,7 @@
 set -e
 
 # Remove old images
-rm *.jpg
+#rm *.jpg
 
 # Download random images
 for i in {1..10}
