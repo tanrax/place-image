@@ -18,19 +18,14 @@ jobs:
         sudo apt update
         sudo apt install webp fish
       
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
+    - name: upload windows artifact
+      uses: actions/upload-release-asset@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ github.token }}
       with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        body: |
-          Changes in this Release
-          - Daily update
-        draft: false
-        prerelease: false
-        body_path: README.md
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./README.md
+        asset_name: README.zip
+        asset_content_type: application/zip
 
 
