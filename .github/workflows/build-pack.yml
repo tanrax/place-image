@@ -12,21 +12,24 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build and zip
-      run: bash place-image
+    
+    - name: Install dependencies
+      run: |
+        apt update
+        apt install webp fish
       
     - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: |
-            Changes in this Release
-            - Update
-          draft: false
-          prerelease: false
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        body: |
+          Changes in this Release
+          - Daily update
+        draft: false
+        prerelease: false
 
 
