@@ -16,19 +16,19 @@
 
 ## Generate your customs images
 
-### Install
+### Require
+
+- webp: `apt install webp`
+- fish: `apt install fish`
+
+### Download
 
 ``` bash
-curl -L https://raw.githubusercontent.com/tanrax/place-image/master/place-images -o place-images
-chmod +x place-images
-sudo mv place-images /usr/local/bin
+curl -L https://raw.githubusercontent.com/tanrax/place-image/master/place-images.fish -o place-images.fish
 ```
 
-### Use
-
-Execute in the folder where you want to create the random images.
-Attention! It will **delete any JPG** image that exists in the directory.
+### Run
 
 ``` bash
-place-images
+fish place-images.fish
 ```

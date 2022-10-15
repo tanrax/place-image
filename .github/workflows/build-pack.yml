@@ -13,18 +13,20 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build and zip
-      run: |
-        mkdir -p pack-place-image
-        cd pack-place-image
-        ../place-images
-        cd ..
-        zip -r pack-place-image.zip pack-place-image
-        rm -r pack-place-image
-    - name: Upload
-      run: |
-        git config user.email "action@github.com"
-        git config user.name "GitHub Action"
-        git add pack-place-image.zip
-        git commit -m 'Update build'
-        git push origin master
+      run: bash place-image
+      
+    - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            Changes in this Release
+            - Update
+          draft: false
+          prerelease: false
+
 
