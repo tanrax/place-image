@@ -2,7 +2,7 @@
 
 ![website](demo2.jpg)
 
-## [Download now](https://github.com/tanrax/place-image/blob/master/pack-place-image.zip?raw=true)
+## [Download now](https://github.com/tanrax/place-image/releases/download/master/pack-place-images.zip)
 (Daily new images)
 
 
