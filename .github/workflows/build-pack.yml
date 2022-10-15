@@ -17,16 +17,18 @@ jobs:
       run: |
         sudo apt update
         sudo apt install webp fish
+        
+    - name: Build zip
+      run: fish place-images.fish
       
-
-    - name: Upload binaries to release
+    - name: Upload zip to release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: ./README.md
-        asset_name: README.md
+        file: ./pack-place-images.zip
+        asset_name: pack-place-images.zip
         tag: ${{ github.ref }}
         overwrite: true
-        body: "This is my release text"
+        body: "Daily build"
 
 
