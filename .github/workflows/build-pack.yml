@@ -31,5 +31,6 @@ jobs:
           - Daily update
         draft: false
         prerelease: false
+        body_path: README.md
 
 
